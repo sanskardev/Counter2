@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_active="false">
-        <color android:color="@color/form_dark"/>
-        <shape>
-            <corners android:radius="10dp"/>
-        </shape>
-    </item>
-    <item android:state_active="true">
-        <color android:color="@color/form_light" />
-    </item>
-</selector>
+<shape android:shape="oval" xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/form_light" />
+    <size android:width="50dp" android:height="50dp"/>
+    <stroke android:width="2dp" android:color="@color/form_dark" />
+</shape>
