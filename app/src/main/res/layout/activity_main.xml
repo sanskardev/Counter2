@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="34dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="34dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="34dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="34dp" />
+
+
+
+    <TextView
+        android:id="@+id/tv_teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Team A"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/text_color"
+        />
+
+    <TextView
+        android:id="@+id/teamA_points"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/teamA_plus"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamA"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_color"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamA_plus"
+        app:layout_constraintStart_toEndOf="@id/teamA_points"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamA"
+        app:layout_constraintEnd_toStartOf="@id/teamA_minus"
+        android:text="+"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamA_minus"
+        app:layout_constraintStart_toEndOf="@id/teamA_plus"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamA"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        android:text="-"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        />
+
+    <TextView
+        android:id="@+id/tv_teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Team B"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/teamA_points"
+        android:layout_marginTop="58dp"
+        android:textColor="@color/text_color"
+        />
+
+    <TextView
+        android:id="@+id/teamB_points"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/teamB_plus"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamB"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/text_color"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamB_plus"
+        app:layout_constraintStart_toEndOf="@id/teamB_points"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamB"
+        app:layout_constraintEnd_toStartOf="@id/teamB_minus"
+        android:text="+"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamB_minus"
+        app:layout_constraintStart_toEndOf="@id/teamB_plus"
+        app:layout_constraintTop_toBottomOf="@id/tv_teamB"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        android:text="-"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
